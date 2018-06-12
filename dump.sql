@@ -18,18 +18,6 @@ CREATE TABLE `apikeys` (
   `notes` mediumtext NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
-CREATE TABLE `config` (
-  `config` varchar(32) NOT NULL,
-  `value` varchar(64) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
-
-INSERT INTO `config` (`config`, `value`) VALUES('smtp_host', 'smtp.mailtrap.io');
-INSERT INTO `config` (`config`, `value`) VALUES('smtp_auth', '1');
-INSERT INTO `config` (`config`, `value`) VALUES('smtp_username', '29d66f6051fe9f');
-INSERT INTO `config` (`config`, `value`) VALUES('smtp_password', '6e5e809bf62773');
-INSERT INTO `config` (`config`, `value`) VALUES('smtp_secure', 'tls');
-INSERT INTO `config` (`config`, `value`) VALUES('smtp_port', '465');
-
 CREATE TABLE `log` (
   `id` int(11) NOT NULL,
   `datetime` datetime NOT NULL,
@@ -45,9 +33,6 @@ CREATE TABLE `log` (
 
 ALTER TABLE `apikeys`
   ADD PRIMARY KEY (`id`);
-
-ALTER TABLE `config`
-  ADD PRIMARY KEY (`config`);
 
 ALTER TABLE `log`
   ADD PRIMARY KEY (`id`);
