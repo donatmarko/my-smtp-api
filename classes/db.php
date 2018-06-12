@@ -12,31 +12,12 @@
 
 class DB
 {
-    private $sql;
-    private $config = null;
+    protected $sql;
+    protected $config = null;
     
     public function __construct($sql)
     {
         $this->sql = $sql;
-    }
-
-    /**
-     * Retrieve email config from database.
-     * @return object 
-     */
-    public function Config()
-    {
-        if ($this->config == null)
-        {
-            if ($query = $this->sql->query('SELECT * FROM config'))
-            {
-                $a = array();                
-                while ($row = $query->fetch_assoc())
-                    $a[$row['config']] = $row['value'];
-                $this->config = (object)$a;
-            }
-        }
-        return $this->config;
     }
     
     /**

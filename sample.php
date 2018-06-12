@@ -37,7 +37,7 @@
 
     require 'classes/common.php';
 
-    $apiurl = 'http://localhost/api/smtp';
+    $apiurl = 'http://localhost/my-smtp-api.git/smtp';
     $apikey = isset($_POST['apikey']) ? $_POST['apikey'] : '';
     $fromName = isset($_POST['fromName']) ? $_POST['fromName'] : '';
     $fromEmail = isset($_POST['fromEmail']) ? $_POST['fromEmail'] : '';

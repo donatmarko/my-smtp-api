@@ -18,7 +18,7 @@ require 'vendor/autoload.php';
 require 'classes/common.php';
 require 'classes/db.php';
 
-$sql = new mysqli($sql_server, $sql_username, $sql_password, $sql_database);
+$sql = new mysqli(SQL_SERVER, SQL_USERNAME, SQL_PASSWORD, SQL_DATABASE);
 $db = new DB($sql);
 
 /**
@@ -66,12 +66,12 @@ function smtpAPI($db)
         {        
             $cfg_smtp->SMTPDebug = 0;
             $cfg_smtp->isSMTP();                    
-            $cfg_smtp->Host = $db->Config()->smtp_host;
-            $cfg_smtp->SMTPAuth = $db->Config()->smtp_auth;
-            $cfg_smtp->Username = $db->Config()->smtp_username;
-            $cfg_smtp->Password = $db->Config()->smtp_password;
-            $cfg_smtp->SMTPSecure = $db->Config()->smtp_secure;
-            $cfg_smtp->Port = $db->Config()->smtp_port;
+            $cfg_smtp->Host = SMTP_SERVER;
+            $cfg_smtp->SMTPAuth = SMTP_AUTH;
+            $cfg_smtp->Username = SMTP_USERNAME;
+            $cfg_smtp->Password = SMTP_PASSWORD;
+            $cfg_smtp->SMTPSecure = SMTP_SECURE;
+            $cfg_smtp->Port = SMTP_PORT;
             $cfg_smtp->CharSet = $charset;
 
             // set from
