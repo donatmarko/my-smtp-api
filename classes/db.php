@@ -6,7 +6,7 @@
  * Database related functions for SMTP API.
  *
  * @author     Donat Marko
- * @copyright  2018 Donatus
+ * @copyright  2020 Donatus
  * @license    GNU GPLv3 https://www.gnu.org/licenses/gpl-3.0.en.html
  */
 

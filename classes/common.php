@@ -6,7 +6,7 @@
  * Some commonly used PHP functions.
  *
  * @author     Donat Marko
- * @copyright  2018 Donatus
+ * @copyright  2020 Donatus
  * @license    MIT https://opensource.org/licenses/MIT
  */
 class Common
